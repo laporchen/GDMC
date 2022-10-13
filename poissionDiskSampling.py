@@ -60,6 +60,12 @@ def poissionSample(sx, sy, ex, ey, num, minRange) -> [[]]:
 
         if not found:
             del activeList[idx]
+    coords = []
+    for row in cells:
+        for p in row:
+            if p != -1:
+                coords.append(p)
+    return coords
 
-    return cells
+print(poissionSample(0,0,300,300,10,20))
 
